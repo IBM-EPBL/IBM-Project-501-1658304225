@@ -1,1 +1,15 @@
+import pywhatkit
+import random
+from datetime import datetime
+n =5
+while n > 0:
+    date_time = str(datetime.now())
+    t = random.randint(20, 50)
+    print("Temperature:",t)
+    h = random.randint(60, 95)
+    print("Humidity:",h)
+    if t > 35:
+        pywhatkit.sendwhatmsg("+916385840555", "HIGH TEMPERATURE DETECTED", int(date_time[11:13]), int(date_time[14:16]) + 1)
+
+    n = n - 1
 
